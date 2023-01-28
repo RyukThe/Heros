@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)(failed)">
+    <classes>
+      <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
+        <methods>
+          <include name="NoProductsFound"/>
+          <include name="joggers"/>
+          <include name="shop"/>
+          <include name="FailedTcSS"/>
+          <include name="Collectibles"/>
+        </methods>
+      </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
+      <class name="PlanetsSuperHerosPSH_KidsTest.PlanetsSuperHerosPSH_KidsTest">
+        <methods>
+          <include name="closeBroswer"/>
+          <include name="verifyPrice"/>
+          <include name="failedTestCaseSS"/>
+        </methods>
+      </class> <!-- PlanetsSuperHerosPSH_KidsTest.PlanetsSuperHerosPSH_KidsTest -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->
