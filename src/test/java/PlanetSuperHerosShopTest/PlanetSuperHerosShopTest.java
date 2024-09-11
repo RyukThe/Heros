@@ -3,13 +3,16 @@ package PlanetSuperHerosShopTest;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.internal.annotations.ITest;
 
 import LibraryFiles.BaseClass;
@@ -21,16 +24,23 @@ public class PlanetSuperHerosShopTest extends BaseClass
 {
 	PlanetSuperHerosShopPage shop;
 	SignUp_Login_Page slp;
+	SoftAssert sof;
 	int TCID;
-	//@Parameters("BrowserName")
-	@Test
-	public void shop() throws IOException
+//	@Parameters("BrowserName")
+	@BeforeClass
+	public void shop( ) throws IOException
 	{
 		openBrowser();
 		TCID=7;
 		shop=new PlanetSuperHerosShopPage(m);
 		slp=new SignUp_Login_Page(m);
+		sof= new SoftAssert();
+	}
 		
+		@Test(priority = 0)
+		public void shop1() throws EncryptedDocumentException, IOException
+		{
+			
 		
 		UtilityClass.getHandelDropDown(m, slp.SignUp_Login_PageShopsection());
 		
@@ -38,15 +48,15 @@ public class PlanetSuperHerosShopTest extends BaseClass
 		shop.clickPlanetSuperHerosShopPageWomen_T_Shirts();
 		
 		String actResult = shop.verifyPlanetSuperHerosShopPageWomenTShirtsTile();
-		Assert.assertEquals(actResult, UtilityClass.getData("Sheet6", 3, 0));
+		sof.assertEquals(actResult, UtilityClass.getData("Sheet6", 3, 0));
 		
-		Assert.assertEquals(shop.verifyPlanetSuperHerosShopPageNoProductsFound(),UtilityClass.getData("Sheet6", 4, 0));
+		sof.assertEquals(shop.verifyPlanetSuperHerosShopPageNoProductsFound(),UtilityClass.getData("Sheet6", 4, 0));
 		
 		
 			
 	}
 	
-	@Test(dependsOnMethods = "shop")
+	@Test(priority = 1)
 	public void NoProductsFound() throws IOException, InterruptedException
 	{
 		TCID=8;
@@ -67,7 +77,7 @@ public class PlanetSuperHerosShopTest extends BaseClass
 			System.out.println(count);
 	}
 	
-	@Test(dependsOnMethods = "NoProductsFound")
+	@Test(priority = 2)
 	public void joggers() throws InterruptedException
 	{
 		TCID=9;
@@ -81,7 +91,7 @@ public class PlanetSuperHerosShopTest extends BaseClass
 		UtilityClass.scrollToElement(m, shop.scrollToPlanetSuperHerosShopPageHightolow());
 		
 	}
-	@Test(dependsOnMethods ="joggers" )
+	@Test(priority = 3)
 	public void Collectibles() throws InterruptedException, EncryptedDocumentException, IOException
 	
 	{
@@ -94,7 +104,7 @@ public class PlanetSuperHerosShopTest extends BaseClass
 		shop.clickPlanetSuperHerosShopPageKotobukiya();
 		
 		String act = shop.verifyProductonKotobukiyapage();
-		Assert.assertEquals(act, UtilityClass.getData("Sheet6", 5, 0));
+		sof.assertEquals(act, UtilityClass.getData("Sheet6", 5, 0));
 	}
 	
 	

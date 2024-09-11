@@ -48,7 +48,7 @@ public class PlanetsSuperHerosPSH_KidsTest extends BaseClass
 	{
 		TCID=16;
 		slp.inpSignUp_Login_PageserachField(UtilityClass.getData("Sheet6", 6, 0));
-		UtilityClass.searc(m, slp.searchWeb());
+		UtilityClass.searc(m, slp.clickSignUp_Login_Pageprofile());
 		
 		kids.clcikPlanetsSuperHerosPSH_KidsPageDisny();
 		Thread.sleep(2000);

@@ -31,7 +31,7 @@ public class LoginPagTest extends BaseClass
 	{
 		
 		
-		
+		System.out.println();
 	}
 	
 	

@@ -28,7 +28,7 @@ public class HeroWelCompageTest extends BaseClass
 		slp= new SignUp_Login_Page(m);
 		TCID=4;
 		
-		UtilityClass.getHandelDropDown(m,slp.clickSignUp_Login_Pageprofile());
+		UtilityClass.getHandelDropDown(m, slp.clickSignUp_Login_Pageprofile());
 		
 		slp.login_signSignUp_Login_Page();
 		

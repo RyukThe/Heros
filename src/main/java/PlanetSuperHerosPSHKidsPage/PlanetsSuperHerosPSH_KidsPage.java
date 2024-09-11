@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class PlanetsSuperHerosPSH_KidsPage
 {
 	@FindBy(xpath = "//div[@class='col-2']") private WebElement logoPHSKIDS;
-	@FindBy(xpath = "((//div[@class='container'])//div)[47]") private WebElement price;
+	@FindBy(xpath = "((//div[@class='container'])//div)[45]") private WebElement price;
 	@FindBy(xpath = "//div[contains(text(),'Disn')]") private WebElement disney;
 	
 	public PlanetsSuperHerosPSH_KidsPage(WebDriver driver) 

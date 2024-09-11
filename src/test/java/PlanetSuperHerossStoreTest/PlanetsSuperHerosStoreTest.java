@@ -88,6 +88,7 @@ public class PlanetsSuperHerosStoreTest extends BaseClass
 	{
 		TCID=33;
 		slp.clickSignUp_Login_Pagestore();
+		
 		store.inpPlanetsSuperHerosStorePagePincode(UtilityClass.getData("Sheet7", 0, 0));
 		store.clickPlanetsSuperHerosStorePageFindstoreBtn();
 		

@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Test3(failed)">
-    <parameter name="BrowserName" value="firefox"/>
-    <classes>
-      <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
-        <methods>
-          <include name="NoProductsFound"/>
-          <include name="joggers"/>
-          <include name="shop"/>
-          <include name="FailedTcSS"/>
-          <include name="Collectibles"/>
-        </methods>
-      </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
-    </classes>
-  </test> <!-- Test3(failed) -->
-  <test thread-count="5" parallel="tests" name="Test2(failed)">
-    <parameter name="BrowserName" value="edge"/>
-    <classes>
-      <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
-        <methods>
-          <include name="NoProductsFound"/>
-          <include name="joggers"/>
-          <include name="shop"/>
-          <include name="FailedTcSS"/>
-          <include name="Collectibles"/>
-        </methods>
-      </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
-    </classes>
-  </test> <!-- Test2(failed) -->
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <parameter name="BrowserName" value="chrome"/>
     <classes>
       <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
         <methods>
+          <include name="closeBrowser"/>
           <include name="NoProductsFound"/>
           <include name="joggers"/>
-          <include name="shop"/>
+          <include name="shop" invocation-numbers="0"/>
           <include name="FailedTcSS"/>
           <include name="Collectibles"/>
         </methods>
       </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
     </classes>
   </test> <!-- Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Test2(failed)">
+    <parameter name="BrowserName" value="edge"/>
+    <classes>
+      <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="NoProductsFound"/>
+          <include name="joggers"/>
+          <include name="shop" invocation-numbers="0"/>
+          <include name="FailedTcSS"/>
+          <include name="Collectibles"/>
+        </methods>
+      </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" parallel="tests" name="Test3(failed)">
+    <parameter name="BrowserName" value="firefox"/>
+    <classes>
+      <class name="PlanetSuperHerosShopTest.PlanetSuperHerosShopTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="NoProductsFound"/>
+          <include name="joggers"/>
+          <include name="shop" invocation-numbers="0"/>
+          <include name="FailedTcSS"/>
+          <include name="Collectibles"/>
+        </methods>
+      </class> <!-- PlanetSuperHerosShopTest.PlanetSuperHerosShopTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
 </suite> <!-- Failed suite [Suite] -->

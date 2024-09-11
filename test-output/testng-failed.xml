@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PlanetSuperHerossStoreTest.PlanetsSuperHerosStoreTest">
+      <class name="Modul1_PlanetSuperHeroeslogin_Signup_Test.HeroWelCompageTest">
         <methods>
-          <include name="closeBroswer"/>
-          <include name="VerifyPinAndCity"/>
-          <include name="openBroswer"/>
-          <include name="failedtestCasesSS"/>
-          <include name="verifyPinAndCity" invocation-numbers="0 1 2"/>
+          <include name="opnBr"/>
+          <include name="verifytitle"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- PlanetSuperHerossStoreTest.PlanetsSuperHerosStoreTest -->
+      </class> <!-- Modul1_PlanetSuperHeroeslogin_Signup_Test.HeroWelCompageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

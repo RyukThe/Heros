@@ -25,5 +25,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="src" path="/First_Maven__project"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
